@@ -1,0 +1,71 @@
+<project name="AlphaCiv" default="help" basedir=".">
+
+	<property name="source-directory" value="src" />
+	<property name="test-source-directory" value="test" />
+	<property name="build-directory" value="build" />
+	<property name="javadoc-directory" value="javadoc" />
+
+	<path id="class-path">
+		<pathelement location="${build-directory}" />
+		<pathelement location="junit-4.4.jar" />
+	</path>
+
+	<target name="help">
+		<echo>
+			AlphaCiv build management. Targets: build-all: Builds test and production code. build-src: Builds production code build-test: Builds test code test: JUnit test production code. test: Runs all JUnit tests clean: Removes all bytecode. javadoc: Generate JavaDoc.
+		</echo>
+	</target>
+
+	<target name="clean">
+		<delete dir="${build-directory}" />
+		<delete dir="${javadoc-directory}" />
+	</target>
+
+	<target name="prepare">
+		<mkdir dir="${build-directory}" />
+		<mkdir dir="${javadoc-directory}" />
+	</target>
+
+	<target name="build-src" depends="prepare">
+		<javac srcdir="${source-directory}" destdir="${build-directory}">
+			<classpath refid="class-path" />
+		</javac>
+	</target>
+
+	<target name="build-test" depends="build-src">
+		<javac srcdir="${test-source-directory}" destdir="${build-directory}">
+			<classpath refid="class-path" />
+		</javac>
+	</target>
+
+	<target name="build-all" depends="build-src,build-test" />
+
+	<target name="test" depends="build-all">
+		<java classname="org.junit.runner.JUnitCore">
+			<arg value="alphaciv.domain.TestAlphaCiv" />
+			<arg value="alphaciv.domain.TestWinning" />
+
+
+			<arg value="test.tests.TestUnits" />
+			<arg value="alphaciv.domain.TestTurns" />
+			<arg value="alphaciv.domain.TestUnitSetup" />
+			<arg value="alphaciv.domain.TestWorldLayout" />
+			<arg value="alphaciv.domain.TestCities" />
+			<arg value="alphaciv.domain.TestUnitProduction" />
+			<arg value="alphaciv.domain.TestMovement" />
+			<arg value="alphaciv.domain.TestAttacks" />
+			<arg value="alphaciv.domain.TestUnitAction" />
+			<arg value="alphaciv.domain.TestWinning" />
+			<arg value="alphaciv.domain.TestWorkForceFocus" />
+			<arg value="alphaciv.domain.TestGameFactory" />
+			<classpath refid="class-path" />
+		</java>
+	</target>
+
+	<target name="javadoc" depends="prepare">
+		<javadoc packagenames="alphaciv.*" destdir="${javadoc-directory}" sourcepath="${source-directory}" windowtitle="AlphaCiv system">
+
+			<classpath refid="class-path" />
+		</javadoc>
+	</target>
+</project>
