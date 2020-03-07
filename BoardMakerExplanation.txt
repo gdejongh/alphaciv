@@ -1,0 +1,9 @@
+As part of their algorithm for making a board, the DeltaCiv programmers decided to use a .txt file to specify the layout of the terrain.
+
+The board is layed out in grid of letters, where each letter sets the tile at that position in the grid to a certain type of terrain.
+
+O = Ocean
+P = Plain
+T = Forest
+H = Hill
+M = Mountain

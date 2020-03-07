@@ -46,7 +46,7 @@
 			<arg value="alphaciv.domain.TestWinning" />
 
 
-			<arg value="test.tests.TestUnits" />
+			<arg value="alphaciv.domain.TestUnits" />
 			<arg value="alphaciv.domain.TestTurns" />
 			<arg value="alphaciv.domain.TestUnitSetup" />
 			<arg value="alphaciv.domain.TestWorldLayout" />

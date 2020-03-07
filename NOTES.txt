@@ -1,0 +1,16 @@
+I followed the basic iterative structure layed out in Chapter 6 of the book. My steps were as follows:
+
+Iteration #:       Task:
+1                   Created package file structure
+2                   Moved classes to new homes in file structure
+3                   Added package declarations to java files
+4                   Created build-src target in build.xml file
+5                   Created test target in build.xml
+6                   Made build-src target create separate build tree
+7                   Created javadoc target in build file
+8                   Made build-test target that allows separation of test and production code,
+                    and created build-all target to run build-src and build-test
+            
+Each iteration in the process followed the same pattern: I would make a change, try to build my code or run my tests, see it fail, and then fix the failure. 
+I found this beneficial because seeing the failure meant that I would have confirmation that the changes I was making were actually taking effect the way I thought they would, and that the fixes I later implemented we actually addressing what they were meant to solve. The iterations were also very useful in giving me natural break points for commiting to source control. Since I would return to a state where I had a functioning program after small steps, I could commit each of these. Later, when I ran into a problem and had to look back at an old commit, I was not left with a lot of ground to make up, since I had been committing regularly due to the this rhythm. 
+

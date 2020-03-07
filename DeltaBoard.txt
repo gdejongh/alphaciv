@@ -1,0 +1,16 @@
+O O O P P M P P P P P 0 O O O O 
+O O P H H P P P P T T T P P O O
+O P P P P P M P P P O O O P P O
+O P P M M M P P P P O O P P P P
+O O O P P P P P H H P P P P O O
+O P T P P P P P P P P H H P P O
+O O O P P P O O O O O O O O O O
+O P P P P P O P P P H P P M O O
+O P P P P P O P P H P P P T O O
+P T T T P P P P O P T T P P P P 
+P P P P P P P P O o o P P P P P 
+O P P M M M P P P P O O O O O O 
+O O P P P P P P T T P P P P O O
+O O O O P P P P P P P P P O O O
+O O P P P H H P P O O O O O O O 
+O O O O O P P P P P P P P P O O
